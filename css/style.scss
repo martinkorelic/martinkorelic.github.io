@@ -247,66 +247,145 @@ button.btn, input.btn {
   }
 }
 
-.content-wrap {
-  margin-bottom: 8em;
-  @include bp-xsmall {
-    margin-bottom: 2em;
-  }
-  @include bp-small {
-    margin-bottom: 2em;
-  }
-  img.img-responsive {
+@media (max-width: 767px) {
+  .content-wrap {
+    margin-bottom: 8em;
     @include bp-xsmall {
-      display: none;
+      margin-bottom: 2em;
     }
     @include bp-small {
-      display: none;
+      margin-bottom: 2em;
     }
-  }
-  .content {
-    margin-top: 5em;
-    margin-left: 5em;
-    @include bp-xsmall {
-      margin-left: 0;
+    img.img-responsive {
+  
+      display: block; /* Show the image */
+      margin: auto; /* Optional: Add some spacing between content and image */
     }
-    h3.title {
-      position: relative;
-      margin-bottom: 1.5em;
-      
-    }
-    .excerpt {
-      width: 80%;
+    .content {
+      margin-top: 5em;
+      margin-left: 5em;
       @include bp-xsmall {
-        width: 100%;
+        margin-left: 0;
+      }
+      h3.title {
+        position: relative;
+        margin-bottom: 1.5em;
+        
+      }
+      .excerpt {
+        width: 80%;
+        @include bp-xsmall {
+          width: 100%;
+        }
+      }
+      button{
+        font-size: 16px;
+        margin-left: 0;
+        margin-bottom: 1em;
+        margin-top: 1em;
+      }
+      .tags, .categories {
+        margin: 2em 0;
+        span {
+          color: #9eb1bd;
+          background-color: #ECEFF1;
+          padding: 0.5em 1.5em;
+          display: inline-block;
+          margin-bottom: 0.5em;
+        }
+      }
+      .categories span {
+        color: #b9b1ad;
+        background-color: #EFEBE9;
       }
     }
-    button{
-      font-size: 16px;
-      margin-left: 0;
-      margin-bottom: 1em;
-      margin-top: 1em;
+    /* Force the image to appear second by overriding the Bootstrap order */
+    #featured-image {
+      margin: auto;
+      order: 2 !important; /* Force the image to come second */
     }
-    .tags, .categories {
-      margin: 2em 0;
-      span {
-        color: #9eb1bd;
-        background-color: #ECEFF1;
-        padding: 0.5em 1.5em;
-        display: inline-block;
-        margin-bottom: 0.5em;
-      }
+
+    #post-content {
+      order: 1 !important; /* Force the content to come first */
     }
-    .categories span {
-      color: #b9b1ad;
-      background-color: #EFEBE9;
-    }
+
+  }
+
+  .post-row {
+    display: flex;
+    flex-direction: column; /* Stack content and image vertically on small screens */
+  }
+
+  img.img-responsive {
+    display: block;
+    margin-top: 1em; /* Adds space between the content and image */
   }
 }
 
+
+
 // vertically center content of post rows
-.post-row {
-    align-items: center;
+@media (min-width: 766px) {
+  .content-wrap {
+    margin-bottom: 8em;
+    @include bp-xsmall {
+      margin-bottom: 2em;
+    }
+    @include bp-small {
+      margin-bottom: 2em;
+    }
+    .content {
+      margin-top: 5em;
+      margin-left: 5em;
+      @include bp-xsmall {
+        margin-left: 0;
+      }
+      h3.title {
+        position: relative;
+        margin-bottom: 1.5em;
+        
+      }
+      .excerpt {
+        width: 80%;
+        @include bp-xsmall {
+          width: 100%;
+        }
+      }
+      button{
+        font-size: 16px;
+        margin-left: 0;
+        margin-bottom: 1em;
+        margin-top: 1em;
+      }
+      .tags, .categories {
+        margin: 2em 0;
+        span {
+          color: #9eb1bd;
+          background-color: #ECEFF1;
+          padding: 0.5em 1.5em;
+          display: inline-block;
+          margin-bottom: 0.5em;
+        }
+      }
+      .categories span {
+        color: #b9b1ad;
+        background-color: #EFEBE9;
+      }
+    }
+  }
+
+  .post-row {
     display: flex;
+    flex-direction: row; /* Stack content and image vertically on small screens */
+  }
+
+  #featured-image {
+    margin: auto;
+  }
+
+  img.img-responsive {
+    display: block;
+  }
 }
 
 /*--------------------------------------------------------------
