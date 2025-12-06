@@ -14,7 +14,7 @@ project_links:
     - link: 'https://repozitorij.uni-lj.si/IzpisGradiva.php?id=175561&lang=slv'
       icon: "book"
       text: "Visit publication"
-lead_text: 'MobileTransformers (or ORTransformersMobile) is an Android app and framework for on-device fine-tuning and text generation of large language models (LLMs). Built on ONNX Runtime, it supports fully local training, generation, quantization, and RAG-based generation, with Huggingface transformer models optimized for mobile and edge devices. Deploy your own small or large language models, create on-device AI agents, fine-tune personalized models from private data, and enable retrieval-augmented generation (RAG) — all completely local, making it perfect for edge AI assistants and personalized LLM experiences in your pocket.'
+lead_text: 'MobileTransformers is an Android app and framework for on-device fine-tuning and text generation of large language models (LLMs). Built on ONNX Runtime, it supports fully local training, generation, quantization, and RAG-based generation, with Huggingface transformer models optimized for mobile and edge devices. Deploy your own small or large language models, create on-device AI agents, fine-tune personalized models from private data, and enable retrieval-augmented generation (RAG) — all completely local, making it perfect for edge AI assistants and personalized LLM experiences in your pocket.'
 ---
 # MobileTransformers - An On-Device LLM PEFT Framework for Fine-Tuning and Generation
 
